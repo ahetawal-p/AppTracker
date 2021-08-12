@@ -1,0 +1,17 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": ["babel", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "parser": "babel-eslint"
+}

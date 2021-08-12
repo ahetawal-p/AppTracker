@@ -1,0 +1,29 @@
+{
+  "name": "apptracker",
+  "version": "1.0.0",
+  "description": "Tracking store and twitter activity for any app",
+  "repository": {},
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "rimraf": "^3.0.2",
+    "got": "^11.1.4",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.31"
+  },
+  "scripts": {
+    "clean": "concurrently \"rimraf node_modules\" \"cd server && rimraf node_modules build\"",
+    "install": "cd server && npm install",
+    "heroku-postbuild": "cd server && npm run build",
+    "start": "concurrently \"cd server && PORT=3001 npm run dev\"",
+    "start:prod": "cd server && npm start",
+    "scheduler": "cd server && npm scheduler"
+  },
+  "keywords": [
+    "social",
+    "android",
+    "ios",
+    "twitter"
+  ],
+  "author": "Amit Hetawal",
+  "license": "ISC"
+}
